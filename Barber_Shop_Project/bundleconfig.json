@@ -1,0 +1,14 @@
+[
+    {
+        "outputFileName": "wwwroot/css/bundle.css",
+        "inputFiles": [
+            "wwwroot/css/fontawesome-all.min.css",
+            "wwwroot/css/main.css",
+            "wwwroot/css/noscript.css"
+        ],
+        "minify": {
+            "enabled": true,
+            "renameLocals": true
+        }
+    }
+]

@@ -1,0 +1,40 @@
+﻿@model IEnumerable<Barber_Shop_Project.Models.User>
+@{
+    ViewBag.Title = "Список пользователей";
+}
+
+@{
+    Layout = "_Layout";
+}
+
+<h3>Table</h3>
+<h4>Default</h4>
+<div class="table-wrapper">
+    <table>
+        <thead>
+            <tr>
+                <th>Email</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var user in Model)
+            {
+                <tr>
+                    <td>@user.Email</td>
+                    <td>
+                        <form asp-action="Delete" asp-route-id="@user.Id" method="post">
+                            <a class="btn btn-sm btn-primary" asp-action="Edit" asp-route-id="@user.Id">Edit</a>
+                            <a class="btn btn-sm btn-primary" asp-action="ChangePassword" asp-route-id="@user.Id">Сменить пароль</a>
+                            <input type="submit" value="Delete" class="primary" />
+                        </form>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+<div class="col-3 col-6-medium col-2-xsmall">
+    <ul class="actions stacked">
+        <li><a asp-action="Create" class="button small fit">Add User</a></li>
+    </ul>
+</div>

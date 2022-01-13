@@ -1,0 +1,28 @@
+﻿@using Microsoft.AspNetCore.Identity
+@model Barber_Shop_Project.Models.ViewModels.ChangeRoleViewModel
+@{
+    Layout = null;
+}
+<h2>Изменение ролей для пользователя @Model.UserEmail</h2>
+
+<form asp-action="Edit" method="post">
+    <input type="hidden" name="userId" value="@Model.UserId" />
+    <div class="form-group">
+        @foreach (IdentityRole role in Model.AllRoles)
+        {
+            @*<div class="col-6 col-12-medium">
+                    <input type="checkbox" id="copy" name="copy">
+                    <label for="copy">Email me a copy of this message</label>
+                </div>
+                <div class="col-6 col-12-medium">
+                    <input type="checkbox" id="human" name="human" checked>
+                    <label for="human">I am a human and not a robot</label>
+                </div>*@
+
+            <input type="checkbox" name="roles" value="@role.Name"
+                   @(Model.UserRoles.Contains(role.Name) ? "checked=\"checked\"" : "") />
+            @role.Name <br />
+        }
+    </div>
+    <button type="submit" class="btn btn-primary">Сохранить</button>
+</form>

@@ -1,0 +1,56 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Content Remove="wwwroot\css\Images\banner.jpg" />
+    <Content Remove="wwwroot\css\Images\pic01.jpg" />
+    <Content Remove="wwwroot\css\Images\pic02.jpg" />
+    <Content Remove="wwwroot\css\Images\pic03.jpg" />
+    <Content Remove="wwwroot\css\Images\pic04.jpg" />
+    <Content Remove="wwwroot\css\Images\pic05.jpg" />
+    <Content Remove="wwwroot\css\Images\pic06.jpg" />
+    <Content Remove="wwwroot\css\Images\pic07.jpg" />
+    <Content Remove="wwwroot\css\Images\pic08.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="System.Data.Entity.dll" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="wwwroot\css\Images\banner.jpg" />
+    <None Include="wwwroot\css\Images\pic01.jpg" />
+    <None Include="wwwroot\css\Images\pic02.jpg" />
+    <None Include="wwwroot\css\Images\pic03.jpg" />
+    <None Include="wwwroot\css\Images\pic04.jpg" />
+    <None Include="wwwroot\css\Images\pic05.jpg" />
+    <None Include="wwwroot\css\Images\pic06.jpg" />
+    <None Include="wwwroot\css\Images\pic07.jpg" />
+    <None Include="wwwroot\css\Images\pic08.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="MailKit" Version="2.13.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity" Version="2.2.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="5.0.7" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="5.0.7" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="5.0.7" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="5.0.7">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="5.0.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="System.Data.Entity.dll" />
+  </ItemGroup>
+
+</Project>

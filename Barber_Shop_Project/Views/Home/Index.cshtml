@@ -1,0 +1,159 @@
+﻿@{
+    Layout = "_Layout";
+}
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<!-- Banner -->
+@await Html.PartialAsync("BannerPartial")
+
+<!-- One -->
+<section id="one" class="spotlight style1 bottom">
+    <span class="image fit main"><img src="~/Images/istockphoto-1164059937-612x612.jpg" alt="" /></span>
+    <div class="content">
+        <div class="container">
+            <div class="row">
+                <div class="col-4 col-12-medium">
+                    <header>
+                        <h2>Salon Philosophy</h2>
+                        <br />
+                        <p>Nascetur eu nibh vestibulum amet gravida nascetur praesent</p>
+                    </header>
+                </div>
+                <div class="col-4 col-12-medium">
+                    <p>
+                        Feugiat accumsan lorem eu ac lorem amet sed accumsan donec.
+                        Blandit orci porttitor semper. Arcu phasellus tortor enim mi
+                        nisi praesent dolor adipiscing. Integer mi sed nascetur cep aliquet
+                        augue varius tempus lobortis porttitor accumsan consequat
+                        adipiscing lorem dolor.
+                    </p>
+                </div>
+                <div class="col-4 col-12-medium">
+                    <p>
+                        Morbi enim nascetur et placerat lorem sed iaculis neque ante
+                        adipiscing adipiscing metus massa. Blandit orci porttitor semper.
+                        Arcu phasellus tortor enim mi mi nisi praesent adipiscing. Integer
+                        mi sed nascetur cep aliquet augue varius tempus. Feugiat lorem
+                        ipsum dolor nullam.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <a href="#two" class="goto-next scrolly">Next</a>
+</section>
+
+<!-- Two -->
+<section id="two" class="spotlight style2 right">
+    <span class="image fit main"><img src="~/Images/DSC_0264.jpg" alt="" /></span>
+    <div class="content">
+        <header>
+            <h2>Interior Quality</h2>
+            <hr />
+            <p>"Barber" creates a fashionable and individual image for each client.</p>
+        </header>
+        <p>Our craftsmen are not afraid of either a rush job on their heads, or the thick beards of sea wolves. "Barber" creates a fashionable and individual image for each client.</p>
+    </div>
+    <a href="#three" class="goto-next scrolly">Next</a>
+</section>
+
+<!-- Three -->
+<section id="three" class="spotlight style3 left">
+    <span class="image fit main bottom"><img src="~/Images/1.jpg" alt="" /></span>
+    <div class="content">
+        <header>
+            <h2>Salon Atmosphere</h2>
+            <hr />
+            <p>Accumsan integer ultricies aliquam vel massa sapien phasellus</p>
+        </header>
+        <p>They say that once you stay in the sea, you will never forget. Welcome to the deck of our On The Ship barbershop!</p>
+    </div>
+    <a href="#four" class="goto-next scrolly">Next</a>
+</section>
+
+<!-- Four -->
+<section id="four" class="wrapper style1 special fade-up">
+    <div class="container">
+        <header class="major">
+            <h2>Cashback and discount system</h2>
+            <hr />
+            <p>Iaculis ac volutpat vis non enim gravida nisi faucibus posuere arcu consequat</p>
+        </header>
+        <div class="box alt">
+            <div class="row gtr-uniform">
+                <section class="col-4 col-6-medium col-12-xsmall">
+                    <span class="icon solid alt major fa-chart-area"></span>
+                    <h3>Ipsum sed commodo</h3>
+                    <p>Feugiat accumsan lorem eu ac lorem amet accumsan donec. Blandit orci porttitor.</p>
+                </section>
+                <section class="col-4 col-6-medium col-12-xsmall">
+                    <span class="icon solid alt major fa-comment"></span>
+                    <h3>Eleifend lorem ornare</h3>
+                    <p>Feugiat accumsan lorem eu ac lorem amet accumsan donec. Blandit orci porttitor.</p>
+                </section>
+                <section class="col-4 col-6-medium col-12-xsmall">
+                    <span class="icon solid alt major fa-flask"></span>
+                    <h3>Cubilia cep lobortis</h3>
+                    <p>Feugiat accumsan lorem eu ac lorem amet accumsan donec. Blandit orci porttitor.</p>
+                </section>
+                <section class="col-4 col-6-medium col-12-xsmall">
+                    <span class="icon solid alt major fa-paper-plane"></span>
+                    <h3>Non semper interdum</h3>
+                    <p>Feugiat accumsan lorem eu ac lorem amet accumsan donec. Blandit orci porttitor.</p>
+                </section>
+                <section class="col-4 col-6-medium col-12-xsmall">
+                    <span class="icon solid alt major fa-file"></span>
+                    <h3>Odio laoreet accumsan</h3>
+                    <p>Feugiat accumsan lorem eu ac lorem amet accumsan donec. Blandit orci porttitor.</p>
+                </section>
+                <section class="col-4 col-6-medium col-12-xsmall">
+                    <span class="icon solid alt major fa-lock"></span>
+                    <h3>Massa arcu accumsan</h3>
+                    <p>Feugiat accumsan lorem eu ac lorem amet accumsan donec. Blandit orci porttitor.</p>
+                </section>
+            </div>
+        </div>
+        <footer class="major">
+            <ul class="actions special">
+                <li><a asp-action="Discounts" asp-controller="Home" class="button">Discount system</a></li>
+            </ul>
+        </footer>
+    </div>
+</section>
+
+<!-- Five -->
+<section id="five" class="wrapper style2 special fade">
+    <div class="container">
+        <header>
+            <h2>Magna faucibus lorem diam</h2>
+            <hr />
+            <p>Ante metus praesent faucibus ante integer id accumsan eleifend</p>
+        </header>
+        <form method="post" asp-controller="Home" asp-action="SendMessage">
+            <div class="row gtr-uniform gtr-50">
+                <div class="col-6 col-12-xsmall">
+                    <input type="text" name="subj" id="name" value="" placeholder="Name" />
+                </div>
+                <div class="col-6 col-12-xsmall">
+                    <input type="email" name="adress" id="email" value="" placeholder="Email" />
+                </div>
+                <div class="col-6 col-12-medium">
+                    <input type="checkbox" id="human" name="human" checked>
+                    <label for="human">I am a human and not a robot</label>
+                </div>
+                <div class="col-12">
+                    <textarea name="mess" id="message" placeholder="Enter your message" rows="6"></textarea>
+                </div>
+                <div class="col-12">
+                    <ul class="actions">
+                        <li><input type="submit" value="Send Message" class="primary" /></li>
+                        <li><input type="reset" value="Reset" /></li>
+                    </ul>
+                </div>
+            </div>
+        </form>
+    </div>
+</section>

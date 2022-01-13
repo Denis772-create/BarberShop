@@ -1,0 +1,62 @@
+﻿@model Barber_Shop_Project.Models.Order
+
+@{
+    Layout = "_Layout";
+}
+
+@{
+    ViewData["Title"] = "Make An Appointment";
+}
+
+<div id="page-wrapper">
+
+    <!-- Main -->
+    <div id="main" class="wrapper style1">
+        <div class="container">
+            <header class="major">
+                <h2>No Sidebar</h2>
+                <br />
+                <p>
+                    Ipsum dolor feugiat aliquam tempus sed magna lorem consequat
+                    accumsan
+                </p>
+            </header>
+
+            <section>
+                <form method="post" asp-action="Index">
+                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                    <div class="row gtr-uniform gtr-50">
+                        <div class="col-12">
+                            <label asp-for="DateOfRecording">Date Of Recording</label>
+                            <input asp-for="DateOfRecording" type="date" class="form-control" style="border-radius: 0.3em; background-color: transparent; width: 580px;" />
+                            <span asp-validation-for="DateOfRecording"></span>
+                        </div>
+                        <div class="col-12">
+                            <label></label>
+                            <label asp-for="HaircutName">Haircut</label>
+                            <select asp-for="HaircutName" id="category" asp-items="@ViewBag.hairList"> </select>
+                            <span asp-validation-for="HaircutName"></span>
+                        </div>
+                        <div class="col-12">
+                            <label asp-for="Employees.Fname">Barber Name</label>
+                            <select asp-for="Employees.Fname" id="category" asp-items="@ViewBag.selectEmplList"> </select>
+                            <span asp-validation-for="Employees.Fname"></span>
+                        </div>
+                        <div class="col-12">
+                            <label>Note</label>
+                            <textarea name="message"
+                                      id="message"
+                                      placeholder="Enter your message"
+                                      rows="4"></textarea>
+                        </div>
+                        <ul class="actions special">
+                            <li>
+                                <input type="submit" value="Make An Appointment" class="primary" />
+                            </li>
+                        </ul>
+                    </div>
+                </form>
+            </section>
+        </div>
+    </div>
+</div>

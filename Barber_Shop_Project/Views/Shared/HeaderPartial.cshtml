@@ -1,0 +1,56 @@
+﻿@using Microsoft.AspNetCore.Http;
+
+<header id="header">
+    <nav id="nav">
+
+        <ul>
+            <li><a asp-controller="Home" asp-action="Index">Home</a></li>
+
+            @if (User.Identity.IsAuthenticated)
+            {
+                <li>
+                    <a href="#">Setting</a>
+                    <ul>
+                        @*<li><a href="left-sidebar.html">Left Sidebar</a></li>
+                            <li><a href="right-sidebar.html">Right Sidebar</a></li>*@
+                        <li><a asp-action="ChangePassword" asp-controller="Users" asp-route-id="@ViewData["Id"]">Change Password</a></li>
+                        <li><a asp-action="Logout" asp-controller="Account">Logout</a></li>
+                    </ul>
+                </li>
+            }
+
+            <li>
+                <a asp-controller="Home" asp-action="Services">Services</a>
+                <ul>
+                    <li><a asp-controller="Home" asp-action="Contacts">Contacts</a></li>
+                    @if (User.IsInRole("admin"))
+                    {
+                        <li>
+                            <a href="#">Submenu</a>
+                            <ul>
+                                <li><a asp-controller="Users" asp-action="Index">Option 1</a></li>
+                                <li><a asp-controller="Users" asp-action="Edit">Option 2</a></li>
+                                <li><a asp-controller="Users" asp-action="Create">Option 3</a></li>
+                                <li><a asp-controller="Roles" asp-action="Index">Option 4</a></li>
+                            </ul>
+                        </li>
+                    }
+                </ul>
+            </li>
+            <li><a asp-controller="Home" asp-action="Team">Team</a></li>
+            <li>
+                @{
+
+                    if (!User.Identity.IsAuthenticated)
+                    {
+                        <a asp-controller="Account" asp-action="Login" class="button primary">Sign Up</a>
+                    }
+                    else
+                    {
+                        <a asp-action="Index" asp-controller="Account" class="button primary">Account</a>
+                    }
+                }
+            </li>
+        </ul>
+    </nav>
+</header>
